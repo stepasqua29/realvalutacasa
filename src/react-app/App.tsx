@@ -225,8 +225,8 @@ function Pacchetti() {
 /* ---------- APP ---------- */
 export default function App() {
   const route = useHashRoute();
-  let page: JSX.Element = <Home />;
-  if (route.startsWith("/calcolatore")) page = <Calcolatore />;
+ let page = <Home />;
+if (route.startsWith("/calcolatore")) page = <Calcolatore />;
   else if (route.startsWith("/pacchetti")) page = <Pacchetti />;
   return <Layout>{page}</Layout>;
 }
